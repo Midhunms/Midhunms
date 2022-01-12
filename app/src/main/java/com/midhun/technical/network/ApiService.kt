@@ -13,13 +13,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
 
 
-interface ApiService {
+public interface ApiService {
 
     @GET(RequestURL.SERVICE_USERS)
     fun requestGetAllUsersAsync(@Query("page") pageNumber: Int): Deferred<ResponseBase<ArrayList<UserListResponseModel>>>
 
     @POST(RequestURL.SERVICE_USERS)
-    fun requestCreateNewUserAsync(@Body createUser: CreateUserRequestModel): Deferred<ResponseBase<UserListResponseModel>>
+    public fun requestCreateNewUserAsync(@Body createUser: CreateUserRequestModel): Deferred<ResponseBase<UserListResponseModel>>
 
     @DELETE(RequestURL.SERVICE_USERS+"/{id}")
     fun requestDeleteUserAsync(@Path("id") id: Int): Deferred<ResponseBase<String>>
@@ -27,7 +27,6 @@ interface ApiService {
     companion object {
 
         operator fun invoke(
-            context: Context,
         ): ApiService {
             val httpLoggingInterceptor = HttpLoggingInterceptor()
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)

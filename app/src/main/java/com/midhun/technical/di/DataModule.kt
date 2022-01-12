@@ -16,6 +16,6 @@ object DataModule {
     @Singleton
     @Provides
     fun provideNowApiService(@ApplicationContext appContext: Context): ApiService {
-        return ApiService(appContext)
+        return ApiService()
     }
 }
