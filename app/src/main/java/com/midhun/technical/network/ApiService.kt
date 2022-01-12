@@ -22,7 +22,7 @@ interface ApiService {
     fun requestCreateNewUserAsync(@Body createUser: CreateUserRequestModel): Deferred<ResponseBase<UserListResponseModel>>
 
     @DELETE(RequestURL.SERVICE_USERS+"/{id}")
-    fun requestDeleteUserAsync(@Path("id") id: Int): Deferred<ResponseBase<UserListResponseModel>>
+    fun requestDeleteUserAsync(@Path("id") id: Int): Deferred<ResponseBase<String>>
 
     companion object {
 
@@ -46,7 +46,7 @@ interface ApiService {
             return Retrofit.Builder()
                 .client(okHttpClient)
                 .baseUrl("https://gorest.co.in")
-                .addCallAdapterFactory(CoroutineCallAdapterFactory())
+                .addCallAdapterFactory(CoroutineCallAdapter())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(ApiService::class.java)

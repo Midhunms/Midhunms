@@ -7,5 +7,5 @@ import com.midhun.technical.network.model.response.UserListResponseModel
 interface UserRepository {
     suspend fun getUserListResponse(pageNumber: Int ): ResponseBase<ArrayList<UserListResponseModel>>
     suspend fun createUserResponse(createUser:CreateUserRequestModel): ResponseBase<UserListResponseModel>
-    suspend fun deleteUserResponse(userId:Int): ResponseBase<UserListResponseModel>
+    suspend fun deleteUserResponse(userId:Int): ResponseBase<String>
 }

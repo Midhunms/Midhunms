@@ -16,6 +16,6 @@ interface UserDataSource {
 
     suspend fun requestDeleteUser(
         userId: Int,
-    ): ResponseBase<UserListResponseModel>
+    ): ResponseBase<String>
 
 }

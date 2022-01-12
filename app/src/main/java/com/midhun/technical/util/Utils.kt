@@ -23,6 +23,13 @@ object Utils {
             meta = null
         }
     }
+    fun <T> generateSuccessResponse(response: T): ResponseBase<T> {
+        return ResponseBase<T>().apply {
+            message = response.toString()
+            data = null
+            meta = null
+        }
+    }
     fun showSnackBar(
         context: Context,
         message: String?,

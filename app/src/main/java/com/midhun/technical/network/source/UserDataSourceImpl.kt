@@ -36,7 +36,7 @@ class UserDataSourceImpl @Inject constructor(private val apiService: ApiService)
         }
     }
 
-    override suspend fun requestDeleteUser(userId: Int): ResponseBase<UserListResponseModel> {
+    override suspend fun requestDeleteUser(userId: Int): ResponseBase<String> {
         return try {
             apiService
                 .requestDeleteUserAsync(userId)

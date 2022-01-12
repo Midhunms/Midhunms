@@ -4,6 +4,7 @@ class ResponseBase<T> {
     var meta: ResponseMeta? = null
     var data: T? = null
     var errorMessage: String? = null
+    var message: String? = null
 
 }
 

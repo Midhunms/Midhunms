@@ -23,7 +23,7 @@ class UserRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun deleteUserResponse(userId: Int): ResponseBase<UserListResponseModel> {
+    override suspend fun deleteUserResponse(userId: Int): ResponseBase<String> {
         return withContext(Dispatchers.IO) {
             return@withContext dataSource.requestDeleteUser(userId)
         }

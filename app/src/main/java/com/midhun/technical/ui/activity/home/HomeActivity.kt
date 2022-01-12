@@ -118,9 +118,9 @@ class HomeActivity : ScopedActivity(), View.OnClickListener, UserListAdapter.Lis
                         mProgressHud?.dismiss()
                     }
                     Utils.showSnackBar(this@HomeActivity,"User Deleted Successfully",Snackbar.LENGTH_LONG)
-                    val mData = (state.data as ResponseBase<UserListResponseModel>)
+                    val mData = (state.data as ResponseBase<String>)
                     if(mData!=null){
-                        mData.data?.let { userArrayList.remove(it) }
+                        userArrayList.remove(mSelectedUser)
                         mAdapter?.notifyDataSetChanged()
                     }
 
