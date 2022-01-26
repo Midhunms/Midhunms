@@ -1,9 +1,5 @@
 # Android developer challenge 
-## Congratulations, you have reached the next stage which is solving a Sliide practical test.
-We’d like to you to write simple Android application for managing users.
 
-### Description
-When we have reviewed your test, and any accompanying documents you feel necessary, if we like what we see, we’ll invite you to join us for a video conversation during which we’ll ask you to go through your test, explaining any decisions that you made.
 
 ### Implementation
 For implementation we use https://gorest.co.in/ public API
@@ -40,8 +36,5 @@ You shouldn't spend more than 1 day on implementation, but if you need more time
 - You create testable code
 - You pay attention to detail
 - Code should be production ready
-
-### Deliverables
-- The forked version of this repo
 
 
