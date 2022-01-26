@@ -1,4 +1,4 @@
-# Sliide Android developer challenge 
+# Android developer challenge 
 ## Congratulations, you have reached the next stage which is solving a Sliide practical test.
 We’d like to you to write simple Android application for managing users.
 
